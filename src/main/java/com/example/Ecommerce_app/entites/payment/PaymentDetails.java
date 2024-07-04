@@ -20,7 +20,9 @@ public class PaymentDetails {
     @GeneratedValue
     private Integer id;
 
+
     @OneToOne
+    @JoinColumn(name = "order_id")
     private Order order;
 
     private Date paymentDate;
@@ -29,4 +31,6 @@ public class PaymentDetails {
     @Enumerated(EnumType.STRING)
     private PaymentMethod paymentMethod;
 
+    @Enumerated(EnumType.STRING)
+    private PaymentStatus paymentStatus;
 }
