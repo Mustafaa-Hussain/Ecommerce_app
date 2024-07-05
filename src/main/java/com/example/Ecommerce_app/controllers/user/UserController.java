@@ -18,8 +18,7 @@ public class UserController {
 
     @GetMapping("user")
     public ResponseEntity<UserResponse> helloUser() {
-        Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
-        String username = authentication.getName();
+        String username = SecurityContextHolder.getContext().getAuthentication().getName();
 
         return userService.getUserData(username);
     }
