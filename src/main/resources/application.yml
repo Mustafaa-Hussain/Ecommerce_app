@@ -9,6 +9,13 @@ spring:
     hibernate:
       ddl-auto: update
 
+encryption:
+  salt:
+    rounds: 10
 
 
-
+jwt:
+  algorithm:
+    key: suberSecuredAlgorithmSecritKey
+  issure: eCommerce
+  expireInSeconds: 604800
